@@ -30,7 +30,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
-        <img class="navbar-brand js-scroll-trigger" href="#page-top" src="../img/logo/skyshuttle_w_text.png" />
+        <img class="navbar-brand brand-logo_size js-scroll-trigger" href="#page-top" src="../img/logo/skyshuttle_w_text.png" />
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
@@ -59,11 +59,38 @@
 
     <!-- Header -->
     <header class="masthead">
-      <div class="container">
+      <div class="container masthead-flex">
         <div class="intro-text">
           <div class="intro-lead-in">SF to Tahoe in an hour.</div>
           <div class="intro-heading text-uppercase">Extending the weekend by 50%</div>
-          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
+        </div>
+        <div class="form-cont">
+            <div class="form-border">
+                <p class="form-cta">Interested in joining our waitlist and saving up to 30 hours of driving per month?</p>
+                <!-- <waitlisted-total domain="sky-shuttle-2c0d941c-f747-4f35-b45b-9d3b6427c7f6.app.waitlisted.co"></waitlisted-total> -->
+                <waitlisted-show>
+                  <waitlisted-error></waitlisted-error>
+                  <waitlisted-form class="oktest" domain="sky-shuttle-2c0d941c-f747-4f35-b45b-9d3b6427c7f6.app.waitlisted.co">
+                      <div class="custom-form-cont">
+                          <label for="reservation[name]" class="form-label">*Name</label>
+                          <input name="reservation[name]" />
+                          <label for="reservation[email]" class="form-label">*Email</label>
+                          <input name="reservation[email]" />
+                          <input type="submit" value="Get Your Spot!" />
+                      </div>
+                  </waitlisted-form>
+                </waitlisted-show>
+
+                <waitlisted-show submitted>
+                  <waitlisted-reflink>
+                  Link to share!
+                  </waitlisted-reflink>
+                  <waitlisted-refurl></waitlisted-refurl>
+                  <waitlisted-refurl as="input"></waitlisted-refurl>
+
+                  <waitlisted-position></waitlisted-position> of <waitlisted-total></waitlisted-total>
+                </waitlisted-show>
+            </div>
         </div>
       </div>
     </header>
@@ -696,6 +723,7 @@
     </div>
 
     <!-- Bootstrap core JavaScript -->
+    <script src="https://storage.googleapis.com/waitlisted-components/index-with-deps.min.js"></script>
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 

@@ -7,6 +7,47 @@ header.masthead {
   background-attachment: scroll;
   background-position: center center;
   @include background-cover;
+  .masthead-flex {
+      display: flex;
+      flex-direction: row;
+
+      .form-border {
+          margin-top: 180px;
+          background-color: rgba(255,255,255,0.6);
+          border-radius: 6px;
+          padding: 20px;
+          p {
+              font-size: 18px;
+              font-family: Montserrat;
+              font-weight: bold;
+              color: #000;
+          }
+          .custom-form-cont {
+              display: flex;
+              flex-direction: column;
+
+              label {
+                  text-align: left;
+                  color: #000;
+              }
+
+              input {
+                  border-radius: 4px;
+                  margin-bottom: 20px;
+                  min-height: 36px;
+                  padding-left: 10px;
+              }
+
+              input[type="submit"] {
+                  background-color: #ffd037;
+                  border: none;
+                  margin-right: 20px;
+                  margin-left: 20px;
+                  cursor: pointer;
+              }
+          }
+      }
+  }
   .intro-text {
     padding-top: 150px;
     padding-bottom: 100px;
@@ -15,6 +56,7 @@ header.masthead {
       font-style: italic;
       line-height: 22px;
       margin-bottom: 25px;
+      text-shadow: 3px 3px #000;
       @include serif-font;
     }
     .intro-heading {
@@ -22,6 +64,7 @@ header.masthead {
       font-weight: 700;
       line-height: 50px;
       margin-bottom: 25px;
+      text-shadow: 3px 3px #000;
       @include heading-font;
     }
   }
@@ -32,6 +75,7 @@ header.masthead {
       padding-top: 300px;
       padding-bottom: 200px;
       .intro-lead-in {
+        text-align: left;
         font-size: 40px;
         font-style: italic;
         line-height: 40px;
@@ -39,6 +83,7 @@ header.masthead {
         @include serif-font;
       }
       .intro-heading {
+        text-align: left;
         font-size: 75px;
         font-weight: 700;
         line-height: 75px;
